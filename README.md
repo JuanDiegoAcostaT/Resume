@@ -18,3 +18,4 @@ The simple application of Php where it includes the backend side, where a CRUD s
 - Heroku
 
 
+The application is developed in a Relational database such as Postgress where there are a series of tables eloquent to the development of the application experience, on the other hand, the deployment is done in heroku and that is the result.
