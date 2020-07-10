@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+    <div class='shadow p-3 mb-5 bg-white rounded text-center card p-4 m-5 '>
+        <h1>Login</h1>
+
+        <div class="alert alert-primary">
+             {{ responseMessage }}
+        </div>
+
+        <form action="/auth" method="post">
+            <label for='email'>Email</label> <br>
+            <input type="text" name="email" placeholder="Email"> <br> <br> 
+            <label for='email'>password</label> <br>
+            <input type="password" name="password" placeholder="password"> <br>  <br> 
+            <button class="rounded btn-primary pl-5 pr-5" type= "submit">Login</button>
+        </form>    
+        <small class="pt-5" >Si no tienes una cuenta, crea una <a href='/users/add'>Register</a> </small>
+    </div>
+
+{% endblock %}  

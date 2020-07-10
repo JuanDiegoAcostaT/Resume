@@ -1,0 +1,84 @@
+{# <!-- ?php
+
+
+//TODO LO DE ABAJO SE QUITO POR LO DE ELFRONT CONTROLLER QUEVA A PRODUCCION Y CUANDO SE TIENE ESTO , ES EN DESARROLLO.
+
+// use Illuminate\Database\Capsule\Manager as Capsule;
+// use App\models\Job;
+
+// $capsule = new Capsule;
+
+// $capsule->addConnection([
+//     'driver'    => 'mysql',
+//     'host'      => 'localhost',
+//     'database'  => 'coursephp',
+//     'username'  => 'root',
+//     'password'  => 'Motocros123',
+//     'charset'   => 'utf8',
+//     'collation' => 'utf8_unicode_ci',
+//     'prefix'    => '',
+// ]);
+
+// // Make this Capsule instance available globally via static methods... (optional)
+// $capsule->setAsGlobal();
+
+// // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
+// $capsule->bootEloquent();
+
+
+//SE QUITO RELATIVAMENTE TODO PORQUE PASO AL CONTROLADOR QUE TIENE POR NOMBRE CONTROLLER Y ES PARTE DEL PATRON DE DISEÑO MVC
+
+?> --> #}
+
+
+{%
+
+    extends 'layout.twig'
+
+%}
+    
+
+{%
+
+  block content
+
+%}
+<header>
+    <nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
+      <div class='container'>
+        <h1 class='navbar-brand'>PHP-APP</h1>
+        <a  class='text-light'  href="/">Resume</a>
+        <a  class='text-light'  href="/projects/add">Add Project</a>
+        <a  class='text-light' href="/logout">Log Out</a>
+        </div>
+    </nav>
+
+</header>
+
+<div class='shadow p-3 mb-5 bg-white rounded text-center card p-4 m-5 '>
+  <h1>Add Job</h1>
+
+  <div class="alert alert-primary" role="alert"> 
+
+    {{responseMessage}}
+
+    </div>
+    
+
+    <form action="/jobs/add" method="post" enctype="multipart/form-data">
+    <label for="">Title</label> <br>
+    <input type="text" name="title" id=""> <br> <br>
+    <label for="">Description</label> <br>
+    <textarea type="text" name="description" id="" rows="4" cols="50" ></textarea> <br> <br>
+    <input type="file" name="logo"> <br> <br>
+    <input type="submit" value="Enviar">
+    </form>
+    </div>
+
+{%
+
+  endblock
+
+%}
+
+
