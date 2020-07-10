@@ -1,4 +1,4 @@
-{% extends "layout.twig" %}
+{% extends "./layout.twig" %}
 
 {% block content %}
 <div class='shadow p-3 mb-5 bg-white rounded text-center card p-4 m-5 '>
@@ -7,11 +7,11 @@
       {{ responseMessage }}
     </div>
 
-    <form action="/login" method="post" >
+    <form class="form" action="/login" method="post" >
         <label for="">Email:</label> <br>
-        <input type="text" name="email" ><br> <br>
+        <input  style=" width : 100% " type="text" name="email" ><br> <br>
         <label for="">Password:</label> <br>
-        <input type="password" name="password"><br> <br>
+        <input  style=" width : 100% " type="password" name="password"><br> <br>
         <button class="rounded btn-primary pl-5 pr-5" type="submit">Save</button>
     </form>
     <small class="pt-5" >Si ya tienes cuenta, inicia Sesión <a href='/login'>Log In</a> </small>

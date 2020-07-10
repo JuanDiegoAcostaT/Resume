@@ -37,3 +37,17 @@ margin-top: 15%;
     display: flex;
     justify-content: space-around;
 }
+
+input {
+    width: 100%;
+}
+
+@media (max-width: 500px) { 
+    .admin {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-right: 15%;
+    }
+ }
+
